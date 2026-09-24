@@ -1,9 +1,8 @@
-import streamlit as st
-st.write("Hello, Streamlit!")
+import ollama
 while True:
-    user_input = st.text_input("you")
+    user_input = input("you")
     if user_input=="exit":
-        st.write("goodbye")
+        print("goodbye")
         break
     else:
         response=ollama.chat(
@@ -13,4 +12,4 @@ while True:
             "content":user_input}
     ]
     )
-    st.write(response["message"]['content'])
+    print(response["message"]['content'])
