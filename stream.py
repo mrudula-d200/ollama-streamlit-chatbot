@@ -1,6 +1,7 @@
 import streamlit as st
 st.write("Hello, Streamlit!")
 import ollama
+
 user_input = st.text_input("you:")
 if st.button("Send"):
     if user_input:
@@ -13,5 +14,7 @@ if st.button("Send"):
                )
         st.write(response["message"]['content'])
 
+        
+            
         
             
